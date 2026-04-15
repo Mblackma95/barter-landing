@@ -34,7 +34,8 @@ function doPost(e) {
 
   sheet.appendRow([
     data.submittedAt || new Date().toISOString(),
-    data.fullName || data.name || "",
+    data.firstName || "",
+    data.lastName || "",
     data.email || "",
     data.emailSkipped ? "yes" : "no",
     data.location || data.city || "",

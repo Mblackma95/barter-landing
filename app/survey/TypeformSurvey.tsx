@@ -14,7 +14,8 @@ type SurveyState = {
   otherFriction: string;
   experienceDesign: string;
   exchangeType: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
   ageRange: string;
   gender: string;
   otherGender: string;
@@ -38,7 +39,8 @@ const initialState: SurveyState = {
   otherFriction: "",
   experienceDesign: "",
   exchangeType: "",
-  fullName: "",
+  firstName: "",
+  lastName: "",
   ageRange: "",
   gender: "",
   otherGender: "",
@@ -400,14 +402,21 @@ export default function TypeformSurvey() {
           "this already tells us a lot.\n\na few optional questions to help us build this better:",
       },
       {
-        eyebrow: "Full name",
-        title: "full name (optional)",
+        eyebrow: "Name",
+        title: "first and last name (optional)",
         content: (
-          <TextInput
-            value={form.fullName}
-            onChange={(value) => update("fullName", value)}
-            placeholder="Your name"
-          />
+          <div className="grid gap-3 sm:grid-cols-2">
+            <TextInput
+              value={form.firstName}
+              onChange={(value) => update("firstName", value)}
+              placeholder="First name"
+            />
+            <TextInput
+              value={form.lastName}
+              onChange={(value) => update("lastName", value)}
+              placeholder="Last name"
+            />
+          </div>
         ),
         isValid: true,
       },
