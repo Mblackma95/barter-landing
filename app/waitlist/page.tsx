@@ -398,6 +398,59 @@ export default function WaitlistPage() {
         </div>
       </section>
 
+      <section className="px-5 py-20 sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-7xl gap-8 rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] p-5 shadow-[12px_12px_0_#2563EB] sm:p-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:p-10">
+          <div className="relative min-h-[420px] overflow-hidden rounded-lg border-2 border-[#0F172A] bg-[#2563EB] shadow-[8px_8px_0_#A3E635]">
+            {/* IMAGE: replace with final founder photo or founder-adjacent campaign asset */}
+            <Image
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85"
+              alt="A woman smiling in natural light"
+              fill
+              sizes="(min-width: 1024px) 36vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-[#2563EB]/20" />
+            <div className="absolute bottom-5 left-5 right-5 rounded-lg border-2 border-[#0F172A] bg-[#A3E635] p-5 text-center shadow-[6px_6px_0_#0F172A]">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#0F172A]">
+                Founder note
+              </p>
+              <p className="mt-2 text-3xl font-black leading-none">
+                More options. More access.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <SectionLabel>Meet the founder</SectionLabel>
+            <h2 className="max-w-4xl text-5xl font-black leading-none tracking-tight sm:text-7xl">
+              A wearer of no hats, but definitely gold hoops.
+            </h2>
+            <div className="mt-6 space-y-5 text-xl font-semibold leading-9 text-[#0F172A]/75">
+              <p>
+                She&apos;s done a bit of everything, from digital marketing for
+                million-dollar brands to holistic wealth coaching, to quietly
+                writing poetry on the side. But this isn&apos;t really about
+                what she&apos;s done. It&apos;s about what she wants to build
+                with you.
+              </p>
+              <p>
+                BarterTogether started with a simple idea: what if people had more
+                options? Options to exchange what they already have, reduce
+                waste, and support each other more directly through goods,
+                services, skills, and whatever else holds value.
+              </p>
+              <p>
+                If you don&apos;t have the money, that shouldn&apos;t always be
+                the thing that stops you from getting what you need. This
+                isn&apos;t about replacing one system with another. It&apos;s
+                about expanding what&apos;s possible, and creating space for
+                both to exist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="waitlist" className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div>

@@ -86,6 +86,43 @@ export default function SurveyPage() {
             </div>
           </div>
         </div>
+
+        <div className="mx-auto mt-10 grid max-w-7xl gap-8 rounded-lg border-2 border-[#0F172A] bg-[#2563EB] p-5 text-white shadow-[12px_12px_0_#A3E635] sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center lg:p-10">
+          <div className="relative min-h-[280px] overflow-hidden rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] shadow-[7px_7px_0_rgba(15,23,42,0.75)]">
+            {/* IMAGE: replace with final founder photo or founder-adjacent campaign asset */}
+            <Image
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=85"
+              alt="A woman smiling in natural light"
+              fill
+              sizes="(min-width: 1024px) 30vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-[#2563EB]/15" />
+          </div>
+
+          <div>
+            <p className="mb-4 inline-flex rounded-full border border-[#0F172A] bg-[#FDFCF9] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#2563EB] shadow-[4px_4px_0_#0F172A]">
+              About the founder
+            </p>
+            <h2 className="max-w-4xl text-4xl font-black leading-none tracking-tight sm:text-6xl">
+              BarterTogether started with a simple question.
+            </h2>
+            <div className="mt-6 space-y-5 text-lg font-semibold leading-8 text-white/90 sm:text-xl sm:leading-9">
+              <p>
+                What if people had more options? Options to exchange what they
+                already have, reduce waste, and support each other more
+                directly through goods, services, skills, and whatever else
+                holds value.
+              </p>
+              <p>
+                This isn&apos;t about replacing one system with another. It&apos;s
+                about expanding what&apos;s possible, and creating space for
+                people to get what they need without money always being the
+                thing that stops them.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
