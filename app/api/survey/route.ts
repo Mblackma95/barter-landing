@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 
-const requiredFields = ["city", "country", "expansionCity"] as const;
-
 export async function POST(request: Request) {
   let payload: Record<string, unknown>;
 
@@ -10,15 +8,6 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json(
       { message: "Survey data was not readable." },
-      { status: 400 },
-    );
-  }
-
-  const missingField = requiredFields.find((field) => !payload[field]);
-
-  if (missingField) {
-    return NextResponse.json(
-      { message: "Please add your city, country, and expansion city." },
       { status: 400 },
     );
   }
@@ -35,18 +24,31 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      submittedAt: new Date().toISOString(),
-      ...payload,
-    }),
-  });
+  let response: Response;
+
+  try {
+    response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({
+        submittedAt: new Date().toISOString(),
+        ...payload,
+      }),
+    });
+  } catch {
+    return NextResponse.json(
+      { message: "Could not reach the Google Sheets webhook URL." },
+      { status: 502 },
+    );
+  }
 
   if (!response.ok) {
+    const details = await response.text();
+
     return NextResponse.json(
-      { message: "Google Sheets did not accept this response yet." },
+      {
+        message: `Google Sheets did not accept this response yet. Status: ${response.status}. ${details.slice(0, 180)}`,
+      },
       { status: 502 },
     );
   }
