@@ -89,10 +89,9 @@ export default function SurveyPage() {
 
         <div className="mx-auto mt-10 grid max-w-7xl gap-8 rounded-lg border-2 border-[#0F172A] bg-[#2563EB] p-5 text-white shadow-[12px_12px_0_#A3E635] sm:p-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center lg:p-10">
           <div className="relative min-h-[280px] overflow-hidden rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] shadow-[7px_7px_0_rgba(15,23,42,0.75)]">
-            {/* IMAGE: replace with final founder photo or founder-adjacent campaign asset */}
             <Image
-              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=85"
-              alt="A woman smiling in natural light"
+              src="/images/morgan-founder-optimized.jpg"
+              alt="Morgan Blackman, founder of BarterTogether"
               fill
               sizes="(min-width: 1024px) 30vw, 100vw"
               className="object-cover"

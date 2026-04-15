@@ -401,10 +401,9 @@ export default function WaitlistPage() {
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-8 rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] p-5 shadow-[12px_12px_0_#2563EB] sm:p-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:p-10">
           <div className="relative min-h-[420px] overflow-hidden rounded-lg border-2 border-[#0F172A] bg-[#2563EB] shadow-[8px_8px_0_#A3E635]">
-            {/* IMAGE: replace with final founder photo or founder-adjacent campaign asset */}
             <Image
-              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85"
-              alt="A woman smiling in natural light"
+              src="/images/morgan-founder-optimized.jpg"
+              alt="Morgan Blackman, founder of BarterTogether"
               fill
               sizes="(min-width: 1024px) 36vw, 100vw"
               className="object-cover"
