@@ -394,6 +394,23 @@ export default function WaitlistPage() {
               keep access open, make local exchange easier, and create a
               platform people actually feel good using.
             </p>
+            <p className="mt-5 text-xl font-semibold leading-9">
+              By joining early, you&apos;re also supporting a woman and BIPOC-owned
+              organization built to welcome all communities, not just the people
+              traditional systems already work for.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {["Woman owned", "BIPOC owned", "All communities", "People first"].map(
+                (value) => (
+                  <span
+                    key={value}
+                    className="rounded-lg border-2 border-[#0F172A] bg-[#A3E635] px-3 py-2 text-xs font-black uppercase tracking-[0.12em] shadow-[3px_3px_0_#0F172A]"
+                  >
+                    {value}
+                  </span>
+                ),
+              )}
+            </div>
           </div>
         </div>
       </section>
