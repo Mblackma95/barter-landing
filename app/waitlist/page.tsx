@@ -398,53 +398,38 @@ export default function WaitlistPage() {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-8 rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] p-5 shadow-[12px_12px_0_#2563EB] sm:p-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:p-10">
-          <div className="relative min-h-[420px] overflow-hidden rounded-lg border-2 border-[#0F172A] bg-[#2563EB] shadow-[8px_8px_0_#A3E635]">
-            <Image
-              src="/images/morgan-founder-optimized.jpg"
-              alt="Morgan Blackman, founder of BarterTogether"
-              fill
-              sizes="(min-width: 1024px) 36vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-[#2563EB]/20" />
-            <div className="absolute bottom-5 left-5 right-5 rounded-lg border-2 border-[#0F172A] bg-[#A3E635] p-5 text-center shadow-[6px_6px_0_#0F172A]">
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#0F172A]">
-                Founder note
-              </p>
-              <p className="mt-2 text-3xl font-black leading-none">
-                More options. More access.
-              </p>
+      <section className="px-5 py-14 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-5xl rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] p-5 shadow-[8px_8px_0_#2563EB] sm:p-7">
+          <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
+            <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full border-2 border-[#0F172A] bg-[#2563EB] shadow-[5px_5px_0_#A3E635] sm:mx-0 sm:h-32 sm:w-32">
+              <Image
+                src="/images/morgan-founder-optimized.jpg"
+                alt="Morgan Blackman, founder of BarterTogether"
+                fill
+                sizes="128px"
+                className="object-cover"
+              />
             </div>
-          </div>
 
-          <div>
-            <SectionLabel>Meet the founder</SectionLabel>
-            <h2 className="max-w-4xl text-5xl font-black leading-none tracking-tight sm:text-7xl">
-              A wearer of no hats, but definitely gold hoops.
-            </h2>
-            <div className="mt-6 space-y-5 text-xl font-semibold leading-9 text-[#0F172A]/75">
-              <p>
-                She&apos;s done a bit of everything, from digital marketing for
-                million-dollar brands to holistic wealth coaching, to quietly
-                writing poetry on the side. But this isn&apos;t really about
-                what she&apos;s done. It&apos;s about what she wants to build
-                with you.
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-[#2563EB]">
+                A note from the founder
               </p>
-              <p>
-                BarterTogether started with a simple idea: what if people had more
-                options? Options to exchange what they already have, reduce
-                waste, and support each other more directly through goods,
-                services, skills, and whatever else holds value.
-              </p>
-              <p>
-                If you don&apos;t have the money, that shouldn&apos;t always be
-                the thing that stops you from getting what you need. This
-                isn&apos;t about replacing one system with another. It&apos;s
-                about expanding what&apos;s possible, and creating space for
-                both to exist.
-              </p>
+              <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight sm:text-4xl">
+                Built by Morgan Blackman, with more questions than answers and a lot of hope.
+              </h2>
+              <div className="mt-4 space-y-4 text-base font-semibold leading-7 text-[#0F172A]/75 sm:text-lg sm:leading-8">
+                <p>
+                  BarterTogether started with a simple idea: what if people had
+                  more options? Options to exchange what they already have,
+                  reduce waste, and support each other more directly.
+                </p>
+                <p>
+                  This isn&apos;t about replacing one system with another.
+                  It&apos;s about expanding what&apos;s possible, and creating
+                  more ways for people to get what they need.
+                </p>
+              </div>
             </div>
           </div>
         </div>
