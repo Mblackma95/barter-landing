@@ -693,9 +693,23 @@ export default function TypeformSurvey() {
           {currentStep.title}
         </h2>
         {currentStep.description ? (
-          <p className="mx-auto mt-4 max-w-2xl text-left text-base font-semibold leading-7 text-[#0F172A] sm:text-lg">
-            {readableParagraph(currentStep.description)}
-          </p>
+          <div className="mx-auto mt-4 max-w-2xl space-y-4 text-left text-base font-semibold leading-7 text-[#0F172A] sm:text-lg">
+            {currentStep.description.includes("→") ? (
+              currentStep.description.split(/\n\n/).map((paragraph) =>
+                paragraph.trim().startsWith("→") ? (
+                  <ul key={paragraph} className="space-y-2 text-center">
+                    {paragraph.split("\n").map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p key={paragraph}>{readableParagraph(paragraph)}</p>
+                ),
+              )
+            ) : (
+              <p>{readableParagraph(currentStep.description)}</p>
+            )}
+          </div>
         ) : null}
         {"visual" in currentStep ? currentStep.visual : null}
         {"content" in currentStep ? (
