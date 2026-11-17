@@ -82,12 +82,13 @@ export default function LocationAutocomplete({
         value={value}
         onChange={(event) => onTextChange(event.target.value)}
         onFocus={() => setIsOpen(results.length > 0)}
-        placeholder="Start typing your city or town"
+        aria-label="Address, town or city, and country"
+        placeholder="Start typing your address, town or city"
         className="min-h-14 w-full rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] px-4 text-lg font-semibold text-[#0F172A] outline-none transition placeholder:text-[#0F172A]/35 focus:shadow-[5px_5px_0_#A3E635]"
       />
       {isLoading ? (
         <p className="mt-2 text-sm font-black uppercase tracking-[0.12em] text-[#2563EB]">
-          searching cities...
+          searching addresses...
         </p>
       ) : null}
       {message ? (

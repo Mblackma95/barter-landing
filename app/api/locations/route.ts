@@ -35,7 +35,7 @@ export async function GET(request: Request) {
       {
         results: [],
         message:
-          "Add MAPBOX_ACCESS_TOKEN to enable global city and town autocomplete.",
+          "Address suggestions are unavailable. Enter your town or city and country manually.",
       },
       { status: 503 },
     );
@@ -44,7 +44,7 @@ export async function GET(request: Request) {
   const mapboxUrl = new URL("https://api.mapbox.com/search/geocode/v6/forward");
   mapboxUrl.searchParams.set("q", query);
   mapboxUrl.searchParams.set("access_token", token);
-  mapboxUrl.searchParams.set("types", "place,locality");
+  mapboxUrl.searchParams.set("types", "address,street,place,locality");
   mapboxUrl.searchParams.set("autocomplete", "true");
   mapboxUrl.searchParams.set("limit", "6");
 
@@ -66,10 +66,10 @@ export async function GET(request: Request) {
       const coordinates = feature.geometry?.coordinates;
       const context = properties?.context;
       const city =
-        properties?.name_preferred ||
-        properties?.name ||
         context?.place?.name ||
         context?.locality?.name ||
+        ((properties?.feature_type === "place" || properties?.feature_type === "locality")
+          ? properties?.name_preferred || properties?.name : "") ||
         "";
       const region = context?.region?.name || "";
       const country = context?.country?.name || "";
@@ -77,7 +77,7 @@ export async function GET(request: Request) {
 
       return {
         id: properties?.mapbox_id || feature.id || label,
-        label: label || properties?.full_address || city,
+        label: properties?.full_address || label || city,
         city,
         region,
         country,

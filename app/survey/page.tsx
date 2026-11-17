@@ -6,7 +6,7 @@ import TypeformSurvey from "./TypeformSurvey";
 export const metadata: Metadata = {
   title: "BarterTogether Community Survey",
   description:
-    "Help shape BarterTogether before the first Toronto launch and future city expansion.",
+    "Help shape BarterTogether and bring the first trading pilot to your town or city.",
 };
 
 export default function SurveyPage() {
@@ -51,9 +51,10 @@ export default function SurveyPage() {
               Help build the trade network your city actually needs.
             </h1>
             <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-[#0F172A]/75 sm:text-xl">
-              BarterTogether launches first in Toronto, but the idea belongs
-              anywhere people want more access, less waste, and better local
-              exchange.
+              The first town or city to reach our signup goal will be the first
+              place we pilot trading. Join the waitlist and share locally to
+              help your community get there. We&apos;ll notify you when trading
+              opens in your area.
             </p>
             <p className="mt-5 max-w-2xl rounded-lg border-2 border-[#0F172A] bg-[#A3E635] px-4 py-3 text-base font-black leading-7 shadow-[5px_5px_0_#0F172A]">
               Your answers shape trust, local events, launch cities, and the

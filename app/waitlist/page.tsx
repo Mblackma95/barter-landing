@@ -169,7 +169,7 @@ export default function WaitlistPage() {
             className="grid items-center gap-10 rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] p-5 shadow-[12px_12px_0_rgba(15,23,42,0.9)] sm:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:p-10"
           >
             <div className="relative z-10">
-              <SectionLabel>Global waitlist / Toronto first</SectionLabel>
+              <SectionLabel>Your town could go first</SectionLabel>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.95] tracking-tight text-[#0F172A] sm:text-7xl lg:text-8xl">
                 What if you didn&apos;t need money to get what you need?
               </h1>
@@ -180,8 +180,8 @@ export default function WaitlistPage() {
                 just dollars.
               </p>
               <p className="mt-5 max-w-2xl rounded-lg border-2 border-[#0F172A] bg-[#A3E635] px-4 py-3 text-base font-black leading-7 shadow-[5px_5px_0_#0F172A]">
-                Sign up from anywhere. Toronto is the first launch city, then
-                BarterTogether grows city by city with the people asking for it.
+                Sign up from anywhere. The first town or city to reach our
+                signup goal will be the first place we pilot trading.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <PrimaryButton href="#waitlist">Join the waitlist</PrimaryButton>
@@ -457,7 +457,7 @@ export default function WaitlistPage() {
           <div>
             <SectionLabel>Waitlist</SectionLabel>
             <h2 className="text-5xl font-black leading-none tracking-tight sm:text-7xl">
-              Join from anywhere. Toronto goes first.
+              Your town could be first.
             </h2>
             <p className="mt-6 max-w-2xl text-xl font-semibold leading-9 text-[#0F172A]/75">
               We&apos;re inviting early users, community-minded creatives, local
@@ -465,13 +465,14 @@ export default function WaitlistPage() {
               shape the first version of BarterTogether.
             </p>
             <p className="mt-5 max-w-2xl text-xl font-semibold leading-9 text-[#0F172A]/75">
-              The first live launch will happen in Toronto. If it goes well,
-              we&apos;ll expand slowly into more cities, guided by where people are
-              already talking, trading, and asking for BarterTogether next.
+              The first town or city to reach our signup goal will be the first
+              place we open up trading. We&apos;ll notify you when your community
+              is ready to launch.
             </p>
             <p className="mt-5 max-w-2xl text-xl font-semibold leading-9 text-[#0F172A]/75">
-              Join the waitlist to get launch updates, early beta access, city
-              expansion news, and first invites to local BarterTogether events.
+              Share with friends, neighbors, and local groups. The more people
+              who join from your area, the closer your community gets to its
+              first trades. Your town could be our first pilot!
             </p>
           </div>
           <div className="rounded-lg border-2 border-[#0F172A] bg-[#FDFCF9] p-5 shadow-[12px_12px_0_#2563EB] sm:p-8 lg:mt-20">
